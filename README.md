@@ -2,6 +2,12 @@ Overview
 ---
 LJ-ArtNet-Node is a very simple Windows (WinForms) application for receiving DMX over [http://art-net.org.uk/](Art-Net), and importing it into [http://www.martin.com/en-us/product-details/lightjockey-2](Martin LightJockey) PC-based lighting controller using LJ's DMX-Override feature, written in VB.NET.
 
+![LJ-ArtNet-Node ScreenShot](screenshot.png?raw=true)
+
+Download
+---
+See [https://github.com/jstnryan/LJ-ArtNet-Node/releases](Releases) for pre-compiled binaries.
+
 Features
 ---
   * Receives up to four (selectable) universes of Art-Net
@@ -20,7 +26,7 @@ Not-Yet Features
 
 Requirements
 ---
-  * .NET Framework 4.6.1
+  * .NET Framework 4.6.1 (Windows 7 SP1 or later)
   * Visual Studio 2015
   * Uses Michael Chapman's [https://github.com/m66n/ipaddresscontrollib](IPAddressControlLib)
   * Uses Bruno Angeles' [https://github.com/funkmeisterb/ArtNet.Net](ArtNet.Net) library
