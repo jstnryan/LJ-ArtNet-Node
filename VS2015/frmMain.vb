@@ -40,27 +40,10 @@ Public Class frmMain
             ReDim Values(chanCount)
 
             ''initialize some dummy dmx values
-            '_dmxData.Reserved = New Integer() {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-            'For u As Integer = 0 To chanCount
-            '    If (14 <= u And u <= 77) Or (93 <= u And u <= 156) Or (172 <= u And u <= 235) Or (251 <= u And u <= 314) Or
-            '        (526 <= u And u <= 589) Or (605 <= u And u <= 668) Or (684 <= u And u <= 747) Or (763 <= u And u <= 826) Or
-            '        (1038 <= u And u <= 1101) Or (1117 <= u And u <= 1180) Or (1196 <= u And u <= 1259) Or (1275 <= u And u <= 1338) Then
-            '        ChFlags(u) = 1
-            '    Else
-            '        ChFlags(u) = 0
-            '    End If
-            '    Values(u) = 0
-            'Next
-            ChFlags = New Byte() {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-            'TODO: Remove
-            Dim chan As Integer = 0
-            For u As Integer = 0 To 7
-                For c As Byte = 0 To 255
-                    chan = (u * 256) + c
-                    Values(chan) = c
-                    If c = 255 Then Exit For
-                Next c
-            Next u
+            'ChFlags = New Byte() {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+            For f As Integer = 0 To 2047
+                ChFlags(f) = 1
+            Next
         End Sub
     End Structure
     Private _dmxData As DMXData = New DMXData(2047)
@@ -88,8 +71,41 @@ Public Class frmMain
 
     Dim ArtnetConnection As ArtNetSocket
 
+    Private Structure TicksSince
+        Private _universe() As Integer
+
+        Default ReadOnly Property Ticks(ByVal universe As Integer) As Integer
+            Get
+                Return _universe(universe)
+            End Get
+        End Property
+
+        Public Sub New(Optional ByVal initial As Integer = Integer.MaxValue)
+            ReDim _universe(3)
+            _universe(0) = initial
+            _universe(1) = initial
+            _universe(2) = initial
+            _universe(3) = initial
+        End Sub
+
+        Public Sub AddTick()
+            If _universe(0) < Integer.MaxValue Then _universe(0) += 1
+            If _universe(1) < Integer.MaxValue Then _universe(1) += 1
+            If _universe(2) < Integer.MaxValue Then _universe(2) += 1
+            If _universe(3) < Integer.MaxValue Then _universe(3) += 1
+        End Sub
+
+        Public Sub Reset(ByVal universe As Integer)
+            _universe(universe) = 0
+        End Sub
+    End Structure
+    Private lastSeen As TicksSince = New TicksSince(Integer.MaxValue)
+
     Protected Overrides Sub OnLoad(e As EventArgs)
-        Timer.Interval = 5000
+        timerInput.Interval = 500
+        timerInput.Enabled = False
+        timerOutput.Interval = 5000
+        timerOutput.Enabled = False
         cmdOutputStartStop.Enabled = False
         ipArtnet.IPAddress = If(My.Settings.IPAddress Is Nothing, IPAddress.Parse("127.0.0.1"), My.Settings.IPAddress)
         ipSubnet.IPAddress = If(My.Settings.Subnet Is Nothing, IPAddress.Parse("127.0.0.1"), My.Settings.Subnet)
@@ -98,33 +114,10 @@ Public Class frmMain
         nudUniverse3.Value = My.Settings.Universe3
         nudUniverse4.Value = My.Settings.Universe4
         nudInterval.Value = My.Settings.Interval
-        If My.Settings.ChFlags Is Nothing Then My.Settings.ChFlags = _dmxData.ChFlags
-
-        ''initialize some dummy dmx values
-        'ReDim _dmxData.Reserved(15)
-        ''_dmxData.Reserved = New Integer() {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-        'Dim maxChan As Integer = 2047 '511, 1023, 1535, 2047
-        'ReDim _dmxData.ChFlags(maxChan)
-        'ReDim _dmxData.Values(maxChan)
-        'For u As Integer = 0 To maxChan
-        '    If (14 <= u And u <= 77) Or (93 <= u And u <= 156) Or (172 <= u And u <= 235) Or (251 <= u And u <= 314) Or
-        '        (526 <= u And u <= 589) Or (605 <= u And u <= 668) Or (684 <= u And u <= 747) Or (763 <= u And u <= 826) Or
-        '        (1038 <= u And u <= 1101) Or (1117 <= u And u <= 1180) Or (1196 <= u And u <= 1259) Or (1275 <= u And u <= 1338) Then
-        '        _dmxData.ChFlags(u) = 1
-        '    Else
-        '        _dmxData.ChFlags(u) = 0
-        '    End If
-        '    _dmxData.Values(u) = 0
-        'Next
-        ''TODO: Remove
-        'Dim chan As Integer = 0
-        'For u As Integer = 0 To 7
-        '    For c As Byte = 0 To 255
-        '        chan = (u * 256) + c
-        '        _dmxData.Values(chan) = c
-        '        If c = 255 Then Exit For
-        '    Next c
-        'Next u
+        'If My.Settings.ChFlags Is Nothing Then My.Settings.ChFlags = _dmxData.ChFlags
+        If Not My.Settings.ChFlags Is Nothing Then
+            _dmxData.ChFlags = My.Settings.ChFlags
+        End If
 
         cdStruct.dwData = _WMCOPY_DMXOverride
         cdStruct.cbData = Marshal.SizeOf(_dmxData)
@@ -141,6 +134,28 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        If timerInput.Enabled Then
+            timerInput.Enabled = False
+            DisconnectArtNet()
+            ipArtnet.Enabled = True
+            ipSubnet.Enabled = True
+            nudUniverse1.Enabled = True
+            nudUniverse2.Enabled = True
+            nudUniverse3.Enabled = True
+            nudUniverse4.Enabled = True
+            pbArtnet1.Image = My.Resources.icons.statusred
+            pbArtnet2.Image = My.Resources.icons.statusred
+            pbArtnet3.Image = My.Resources.icons.statusred
+            pbArtnet4.Image = My.Resources.icons.statusred
+            cmdInputStartStop.Text = "Input Start"
+        End If
+
+        If timerOutput.Enabled Then
+            timerOutput.Enabled = False
+            nudInterval.Enabled = True
+            cmdOutputStartStop.Text = "Output Start"
+        End If
+
         Marshal.FreeHGlobal(cdStruct.lpData)
         Marshal.FreeHGlobal(_cdPtr)
         My.Settings.Save()
@@ -163,12 +178,25 @@ Public Class frmMain
     Private Sub ProcessPacket(sender As Object, e As NewPacketEventArgs(Of ArtNetPacket))
         If (e.Packet.OpCode = ArtNet.Enums.ArtNetOpCodes.Dmx) Then
             Dim packet As ArtNetDmxPacket = TryCast(e.Packet, ArtNet.Packets.ArtNetDmxPacket)
-            If packet.Universe < 4 Then
-                For i As Integer = 0 To packet.Length - 1
-                    _dmxData.Values((packet.Universe * 512) + i) = packet.DmxData(i)
-                Next
-                'If Application.OpenForms().OfType(Of frmSettings).Any = True Then frmSettings.UpdateValues(packet.Universe)
-            End If
+            Dim destUniv As Byte
+            Select Case CInt(packet.Universe)
+                Case My.Settings.Universe1
+                    destUniv = 0
+                Case My.Settings.Universe2
+                    destUniv = 1
+                Case My.Settings.Universe3
+                    destUniv = 2
+                Case My.Settings.Universe4
+                    destUniv = 3
+                Case Else
+                    Exit Sub
+            End Select
+            lastSeen.Reset(destUniv)
+            For i As Integer = 0 To packet.Length - 1
+                _dmxData.Values((destUniv * 512) + i) = packet.DmxData(i)
+            Next
+            ''Update frmSettings?
+            'If Application.OpenForms().OfType(Of frmSettings).Any = True Then frmSettings.UpdateValues(packet.Universe)
 
             'If packet.DmxData IsNot _dmxData Then
             '    Console.WriteLine("New Packet")
@@ -195,7 +223,7 @@ Public Class frmMain
         Else
             pbLightJockey.Image = My.Resources.icons.statusred
         End If
-        Timer.Enabled = True
+        timerOutput.Enabled = True
     End Sub
 
     Public Sub DetectLJReadyState()
@@ -203,13 +231,13 @@ Public Class frmMain
         Dim res As Integer = CType(SendMessage(LJWindowHandle, WM_USER + 1502, IntPtr.Zero, IntPtr.Zero), Integer)
         If res = 1 Then
             pbLightJockey.Image = My.Resources.icons.statusgreen
-            Timer.Enabled = False
-            Timer.Interval = My.Settings.Interval
+            timerOutput.Enabled = False
+            timerOutput.Interval = My.Settings.Interval
             cmdOutputStartStop.Enabled = True
         Else
-            Timer.Interval = 5000
+            timerOutput.Interval = 5000
             pbLightJockey.Image = My.Resources.icons.statusyellow
-            Timer.Enabled = True
+            timerOutput.Enabled = True
         End If
     End Sub
 
@@ -226,28 +254,29 @@ Public Class frmMain
             End If
         Catch ex As Exception
             pbLightJockey.Image = My.Resources.icons.statusred
-            Timer.Enabled = False
+            timerOutput.Enabled = False
             cmdOutputStartStop.Text = "Output Start"
             cmdOutputStartStop.Enabled = False
         End Try
     End Sub
 
-    Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
+    Private Sub timerOutput_Tick(sender As Object, e As EventArgs) Handles timerOutput.Tick
         If Not cmdOutputStartStop.Enabled Then
             DetectLightJockey()
         Else
+            'lastSeen.AddTick()
             SendDMXValues()
         End If
     End Sub
 
     Private Sub cmdOutputStartStop_Click(sender As Object, e As EventArgs) Handles cmdOutputStartStop.Click
-        If Timer.Enabled Then
-            Timer.Enabled = False
+        If timerOutput.Enabled Then
+            timerOutput.Enabled = False
             nudInterval.Enabled = True
             cmdOutputStartStop.Text = "Output Start"
         Else
             nudInterval.Enabled = False
-            Timer.Enabled = True
+            timerOutput.Enabled = True
             cmdOutputStartStop.Text = "Output Stop"
         End If
     End Sub
@@ -266,7 +295,9 @@ Public Class frmMain
             nudUniverse4.Enabled = False
             ConnectArtNet()
             cmdInputStartStop.Text = "Input Stop"
+            timerInput.Enabled = True
         Else
+            timerInput.Enabled = False
             DisconnectArtNet()
             ipArtnet.Enabled = True
             ipSubnet.Enabled = True
@@ -274,11 +305,15 @@ Public Class frmMain
             nudUniverse2.Enabled = True
             nudUniverse3.Enabled = True
             nudUniverse4.Enabled = True
+            pbArtnet1.Image = My.Resources.icons.statusred
+            pbArtnet2.Image = My.Resources.icons.statusred
+            pbArtnet3.Image = My.Resources.icons.statusred
+            pbArtnet4.Image = My.Resources.icons.statusred
             cmdInputStartStop.Text = "Input Start"
         End If
     End Sub
 
-    Private Sub nudInterval_ValueChanged(sender As Object, e As EventArgs) Handles nudInterval.ValueChanged
+    Private Sub nudInterval_TextChanged(sender As Object, e As EventArgs) Handles nudInterval.TextChanged
         My.Settings.Interval = CInt(nudInterval.Value)
     End Sub
 
@@ -290,19 +325,66 @@ Public Class frmMain
         My.Settings.Subnet = ipSubnet.IPAddress
     End Sub
 
-    Private Sub nudUniverse1_ValueChanged(sender As Object, e As EventArgs) Handles nudUniverse1.ValueChanged
+    Private Sub nudUniverse1_TextChanged(sender As Object, e As EventArgs) Handles nudUniverse1.TextChanged
         My.Settings.Universe1 = CInt(nudUniverse1.Value)
     End Sub
 
-    Private Sub nudUniverse2_ValueChanged(sender As Object, e As EventArgs) Handles nudUniverse2.ValueChanged
+    Private Sub nudUniverse2_TextChanged(sender As Object, e As EventArgs) Handles nudUniverse2.TextChanged
         My.Settings.Universe2 = CInt(nudUniverse2.Value)
     End Sub
 
-    Private Sub nudUniverse3_ValueChanged(sender As Object, e As EventArgs) Handles nudUniverse3.ValueChanged
+    Private Sub nudUniverse3_TextChanged(sender As Object, e As EventArgs) Handles nudUniverse3.TextChanged
         My.Settings.Universe3 = CInt(nudUniverse3.Value)
     End Sub
 
-    Private Sub nudUniverse4_ValueChanged(sender As Object, e As EventArgs) Handles nudUniverse4.ValueChanged
+    Private Sub nudUniverse4_TextChanged(sender As Object, e As EventArgs) Handles nudUniverse4.TextChanged
         My.Settings.Universe4 = CInt(nudUniverse4.Value)
+    End Sub
+
+    Private Sub findNotAlive()
+        'Art-Net defines a "Keep-Alive" value of 4 seconds
+        'Calculate the number of Timer.Tick events required to consider Universe's data outdated
+        Dim tooManyTicks As Integer = CInt(4000 / timerInput.Interval)
+        If lastSeen.Ticks(0) < Integer.MaxValue Then
+            If tooManyTicks <= lastSeen.Ticks(0) Then
+                pbArtnet1.Image = My.Resources.icons.statusyellow
+            Else
+                pbArtnet1.Image = My.Resources.icons.statusgreen
+            End If
+        Else
+            pbArtnet1.Image = My.Resources.icons.statusred
+        End If
+        If lastSeen.Ticks(1) < Integer.MaxValue Then
+            If tooManyTicks <= lastSeen.Ticks(1) Then
+                pbArtnet2.Image = My.Resources.icons.statusyellow
+            Else
+                pbArtnet2.Image = My.Resources.icons.statusgreen
+            End If
+        Else
+            pbArtnet2.Image = My.Resources.icons.statusred
+        End If
+        If lastSeen.Ticks(2) < Integer.MaxValue Then
+            If tooManyTicks <= lastSeen.Ticks(2) Then
+                pbArtnet3.Image = My.Resources.icons.statusyellow
+            Else
+                pbArtnet3.Image = My.Resources.icons.statusgreen
+            End If
+        Else
+            pbArtnet3.Image = My.Resources.icons.statusred
+        End If
+        If lastSeen.Ticks(3) < Integer.MaxValue Then
+            If tooManyTicks <= lastSeen.Ticks(3) Then
+                pbArtnet4.Image = My.Resources.icons.statusyellow
+            Else
+                pbArtnet4.Image = My.Resources.icons.statusgreen
+            End If
+        Else
+            pbArtnet4.Image = My.Resources.icons.statusred
+        End If
+    End Sub
+
+    Private Sub timerInput_Tick(sender As Object, e As EventArgs) Handles timerInput.Tick
+        lastSeen.AddTick()
+        findNotAlive()
     End Sub
 End Class

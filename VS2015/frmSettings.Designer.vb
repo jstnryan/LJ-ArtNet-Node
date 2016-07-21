@@ -22,12 +22,12 @@ Partial Class frmSettings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Universe 1", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Universe 2", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup3 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Universe 3", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewGroup4 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Universe 4", System.Windows.Forms.HorizontalAlignment.Left)
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New System.Windows.Forms.ListViewItem.ListViewSubItem() {New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "1"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "127", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.MenuHighlight, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "127", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.MenuHighlight, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0")}, -1)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2049", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"}, -1)
+        Dim ListViewGroup9 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Universe 1", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup10 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Universe 2", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup11 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Universe 3", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup12 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Universe 4", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New System.Windows.Forms.ListViewItem.ListViewSubItem() {New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "1"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "127", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.MenuHighlight, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "127", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.MenuHighlight, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0"), New System.Windows.Forms.ListViewItem.ListViewSubItem(Nothing, "0")}, -1)
+        Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"2049", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"}, -1)
         Me.cmdClose = New System.Windows.Forms.Button()
         Me.lvValueFlags = New System.Windows.Forms.ListView()
         Me.ColumnHeader0 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -47,7 +47,7 @@ Partial Class frmSettings
         Me.ColumnHeader14 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader15 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader16 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboSelection = New System.Windows.Forms.ComboBox()
         Me.lblSelect = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -67,20 +67,20 @@ Partial Class frmSettings
         Me.lvValueFlags.BackColor = System.Drawing.SystemColors.Window
         Me.lvValueFlags.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader0, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16})
         Me.lvValueFlags.GridLines = True
-        ListViewGroup1.Header = "Universe 1"
-        ListViewGroup1.Name = "lvgUniverse1"
-        ListViewGroup2.Header = "Universe 2"
-        ListViewGroup2.Name = "lvgUniverse2"
-        ListViewGroup3.Header = "Universe 3"
-        ListViewGroup3.Name = "lvgUniverse3"
-        ListViewGroup4.Header = "Universe 4"
-        ListViewGroup4.Name = "lvgUniverse4"
-        Me.lvValueFlags.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2, ListViewGroup3, ListViewGroup4})
+        ListViewGroup9.Header = "Universe 1"
+        ListViewGroup9.Name = "lvgUniverse1"
+        ListViewGroup10.Header = "Universe 2"
+        ListViewGroup10.Name = "lvgUniverse2"
+        ListViewGroup11.Header = "Universe 3"
+        ListViewGroup11.Name = "lvgUniverse3"
+        ListViewGroup12.Header = "Universe 4"
+        ListViewGroup12.Name = "lvgUniverse4"
+        Me.lvValueFlags.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup9, ListViewGroup10, ListViewGroup11, ListViewGroup12})
         Me.lvValueFlags.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        ListViewItem1.Group = ListViewGroup1
-        ListViewItem1.UseItemStyleForSubItems = False
-        ListViewItem2.Group = ListViewGroup4
-        Me.lvValueFlags.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2})
+        ListViewItem5.Group = ListViewGroup9
+        ListViewItem5.UseItemStyleForSubItems = False
+        ListViewItem6.Group = ListViewGroup12
+        Me.lvValueFlags.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem5, ListViewItem6})
         Me.lvValueFlags.Location = New System.Drawing.Point(12, 12)
         Me.lvValueFlags.Name = "lvValueFlags"
         Me.lvValueFlags.Size = New System.Drawing.Size(538, 349)
@@ -189,14 +189,14 @@ Partial Class frmSettings
         Me.ColumnHeader16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.ColumnHeader16.Width = 30
         '
-        'ComboBox1
+        'cboSelection
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"All", "None", "Universe 1", "Universe 2", "Universe 3", "Universe 4", "Odd", "Even", "n+1", "n+2", "n+3", "n+4"})
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 369)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 3
+        Me.cboSelection.FormattingEnabled = True
+        Me.cboSelection.Items.AddRange(New Object() {"Universe 1", "Universe 2", "Universe 3", "Universe 4", "None (0n+0)", "All (1n+0)", "Even (2n+0)", "Odd (2n+1)", "Every 3rd (3n+0)", "Every 3rd (3n+1)", "Every 3rd (3n+2)", "Every 4th (4n+0)", "Every 4th (4n+1)", "Every 4th (4n+2)", "Every 4th (4n+3)"})
+        Me.cboSelection.Location = New System.Drawing.Point(12, 369)
+        Me.cboSelection.Name = "cboSelection"
+        Me.cboSelection.Size = New System.Drawing.Size(121, 21)
+        Me.cboSelection.TabIndex = 3
         '
         'lblSelect
         '
@@ -213,11 +213,12 @@ Partial Class frmSettings
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(562, 400)
         Me.Controls.Add(Me.lblSelect)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboSelection)
         Me.Controls.Add(Me.lvValueFlags)
         Me.Controls.Add(Me.cmdClose)
         Me.Name = "frmSettings"
-        Me.Text = "frmSettings"
+        Me.ShowIcon = False
+        Me.Text = "Channel Overrides"
         Me.ResumeLayout(False)
 
     End Sub
@@ -240,6 +241,6 @@ Partial Class frmSettings
     Friend WithEvents ColumnHeader14 As ColumnHeader
     Friend WithEvents ColumnHeader15 As ColumnHeader
     Friend WithEvents ColumnHeader16 As ColumnHeader
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboSelection As ComboBox
     Friend WithEvents lblSelect As Button
 End Class

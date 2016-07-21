@@ -23,7 +23,7 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Timer = New System.Windows.Forms.Timer(Me.components)
+        Me.timerOutput = New System.Windows.Forms.Timer(Me.components)
         Me.grpArtNet = New System.Windows.Forms.GroupBox()
         Me.lblSubnet = New System.Windows.Forms.Label()
         Me.ipSubnet = New IPAddressControlLib.IPAddressControl()
@@ -49,6 +49,7 @@ Partial Class frmMain
         Me.cmdSettings = New System.Windows.Forms.Button()
         Me.cmdOutputStartStop = New System.Windows.Forms.Button()
         Me.pbLightJockey = New System.Windows.Forms.PictureBox()
+        Me.timerInput = New System.Windows.Forms.Timer(Me.components)
         Me.grpArtNet.SuspendLayout()
         CType(Me.nudUniverse4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudUniverse3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +64,7 @@ Partial Class frmMain
         CType(Me.pbLightJockey, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Timer
+        'timerOutput
         '
         '
         'grpArtNet
@@ -147,32 +148,29 @@ Partial Class frmMain
         'nudUniverse4
         '
         Me.nudUniverse4.Location = New System.Drawing.Point(73, 143)
-        Me.nudUniverse4.Maximum = New Decimal(New Integer() {32768, 0, 0, 0})
-        Me.nudUniverse4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudUniverse4.Maximum = New Decimal(New Integer() {32767, 0, 0, 0})
         Me.nudUniverse4.Name = "nudUniverse4"
         Me.nudUniverse4.Size = New System.Drawing.Size(50, 20)
         Me.nudUniverse4.TabIndex = 32
-        Me.nudUniverse4.Value = New Decimal(New Integer() {4, 0, 0, 0})
+        Me.nudUniverse4.Value = New Decimal(New Integer() {3, 0, 0, 0})
         '
         'nudUniverse3
         '
         Me.nudUniverse3.Location = New System.Drawing.Point(73, 117)
-        Me.nudUniverse3.Maximum = New Decimal(New Integer() {32768, 0, 0, 0})
-        Me.nudUniverse3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudUniverse3.Maximum = New Decimal(New Integer() {32767, 0, 0, 0})
         Me.nudUniverse3.Name = "nudUniverse3"
         Me.nudUniverse3.Size = New System.Drawing.Size(50, 20)
         Me.nudUniverse3.TabIndex = 31
-        Me.nudUniverse3.Value = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.nudUniverse3.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'nudUniverse2
         '
         Me.nudUniverse2.Location = New System.Drawing.Point(73, 91)
-        Me.nudUniverse2.Maximum = New Decimal(New Integer() {32768, 0, 0, 0})
-        Me.nudUniverse2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudUniverse2.Maximum = New Decimal(New Integer() {32767, 0, 0, 0})
         Me.nudUniverse2.Name = "nudUniverse2"
         Me.nudUniverse2.Size = New System.Drawing.Size(50, 20)
         Me.nudUniverse2.TabIndex = 30
-        Me.nudUniverse2.Value = New Decimal(New Integer() {2, 0, 0, 0})
+        Me.nudUniverse2.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label1
         '
@@ -186,12 +184,10 @@ Partial Class frmMain
         'nudUniverse1
         '
         Me.nudUniverse1.Location = New System.Drawing.Point(73, 65)
-        Me.nudUniverse1.Maximum = New Decimal(New Integer() {32768, 0, 0, 0})
-        Me.nudUniverse1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudUniverse1.Maximum = New Decimal(New Integer() {32767, 0, 0, 0})
         Me.nudUniverse1.Name = "nudUniverse1"
         Me.nudUniverse1.Size = New System.Drawing.Size(50, 20)
         Me.nudUniverse1.TabIndex = 28
-        Me.nudUniverse1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'cmdInputStartStop
         '
@@ -331,6 +327,10 @@ Partial Class frmMain
         Me.pbLightJockey.TabIndex = 14
         Me.pbLightJockey.TabStop = False
         '
+        'timerInput
+        '
+        Me.timerInput.Interval = 500
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -360,7 +360,7 @@ Partial Class frmMain
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Timer As Timer
+    Friend WithEvents timerOutput As Timer
     Friend WithEvents grpArtNet As GroupBox
     Friend WithEvents nudUniverse1 As NumericUpDown
     Friend WithEvents cmdInputStartStop As Button
@@ -386,4 +386,5 @@ Partial Class frmMain
     Friend WithEvents ipSubnet As IPAddressControlLib.IPAddressControl
     Friend WithEvents lblInterval As Label
     Friend WithEvents nudInterval As NumericUpDown
+    Friend WithEvents timerInput As Timer
 End Class

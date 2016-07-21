@@ -74,4 +74,82 @@ Public Class frmSettings
     Private Sub frmSettings_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.Save()
     End Sub
+
+    Private Sub lblSelect_Click(sender As Object, e As EventArgs) Handles lblSelect.Click
+        Select Case cboSelection.SelectedIndex
+            Case 0 'Universe 1
+                For f As Integer = 0 To 511
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 1 'Universe 2
+                For f As Integer = 512 To 1023
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 2 'Universe 3
+                For f As Integer = 1024 To 1535
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 3 'Universe 4
+                For f As Integer = 1536 To 2047
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 4 'None (0n+0)
+                For f As Integer = 0 To 2047
+                    frmMain.ChannelFlag(f) = 0
+                Next
+            Case 5 'All (1n+0)
+                For f As Integer = 0 To 2047
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 6 'Even (2n+0)
+                For f As Integer = 0 To 2046 Step 2
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 7 'Odd (2n+1)
+                For f As Integer = 1 To 2047 Step 2
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 8 'Every 3rd (3n+0)
+                For f As Integer = 0 To 2047 Step 3
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 9 'Every 3rd (3n+1)
+                For f As Integer = 1 To 2047 Step 3
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 10 'Every 3rd (3n+2)
+                For f As Integer = 2 To 2047 Step 3
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 11 'Every 4th (4n+0)
+                For f As Integer = 0 To 2047 Step 4
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 12 'Every 4th (4n+1)
+                For f As Integer = 1 To 2047 Step 4
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 13 'Every 4th (4n+2)
+                For f As Integer = 2 To 2047 Step 4
+                    frmMain.ChannelFlag(f) = 1
+                Next
+            Case 14 'Every 4th (4n+3)
+                For f As Integer = 3 To 2047 Step 4
+                    frmMain.ChannelFlag(f) = 1
+                Next
+        End Select
+        UpdateFlags()
+    End Sub
+
+    Private Sub UpdateFlags()
+        For l As Byte = 0 To 127 '128 lines of 16 values = 2048 channels
+            For s As Byte = 0 To 15 '16 channels per line
+                If frmMain.ChannelFlag((l * 16) + s) = 1 Then
+                    lvValueFlags.Items(l).SubItems(s + 1).BackColor = SystemColors.MenuHighlight
+                Else
+                    lvValueFlags.Items(l).SubItems(s + 1).BackColor = SystemColors.Window
+                End If
+            Next
+        Next
+    End Sub
 End Class

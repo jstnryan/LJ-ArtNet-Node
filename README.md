@@ -1,6 +1,6 @@
 Overview
 ---
-LJ-ArtNet-Node is a very simple Windows (WinForms) application for receiving DMX over Art-Net, and importing it into LightJockey using LJ's DMX-Override feature.
+LJ-ArtNet-Node is a very simple Windows (WinForms) application for receiving DMX over [http://art-net.org.uk/](Art-Net), and importing it into [http://www.martin.com/en-us/product-details/lightjockey-2](Martin LightJockey) PC-based lighting controller using LJ's DMX-Override feature, written in VB.NET.
 
 Features
 ---
@@ -16,6 +16,7 @@ Not-Yet Features
   * Live view of DMX values in override window
   * Export of settings to file
   * Individual channel mapping (maybe)
+  * Conditional channel override (above threshold, non-zero value, etc.)
 
 Requirements
 ---
